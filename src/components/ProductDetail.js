@@ -40,6 +40,7 @@ function ProductDetail({ product }) {
                   Status: {product.countInStock > 0 ? "In Stock" : "Unavailable."}
                </p>
 
+               <div className="prouduct-sel">
                <p className="product-qty">
                   Qty: {"   "}
                   <Select 
@@ -53,10 +54,6 @@ function ProductDetail({ product }) {
                         </Option>
                      ))}
                   </Select>
-               </p>
-
-               <p className="product-qty">
-                  Total Price: {product.price * qty}
                </p>
 
                <p className="product-col">
@@ -73,10 +70,16 @@ function ProductDetail({ product }) {
                      ))}
                   </Select>
                </p>
+               </div>
 
-               <p className="product-col">
-                  Color: {col}
-               </p>
+               <div className="prouduct-show">
+                  <p className="product-qty">
+                     Total Price: {product.price * qty}
+                  </p>
+                  <p className="product-col2">
+                     Color: {col}
+                  </p>
+               </div>
                               
                <AddToCart />
             </div>
